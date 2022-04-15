@@ -14,185 +14,357 @@
     </div>
    
     <div id="orta">
-        <div id="no">
-            <span class="numara">1</span>
-            <span class="numara">2</span>
-            <span class="numara">3</span>
-            <span class="numara">4</span>
-            <span class="numara">5</span>
-            <span class="numara">6</span>
-            <span class="numara">7</span>
-            <span class="numara">8</span>
-            <span class="numara">9</span>
-            <span class="numara">10</span>
-            <span class="numara">11</span>
-            <span class="numara">12</span>
-            <span class="numara">13</span>
-            <span class="numara">14</span>
-            <span class="numara">15</span>
-            <span class="numara">16</span>
-            <span class="numara">17</span>
-            <span class="numara">18</span>
-            <span class="numara">19</span>
-            <span class="numara">20</span>
-            <span class="numara">21</span>
-            <span class="numara">22</span>
-            <span class="numara">23</span>
-            <span class="numara">24</span>
-            <span class="numara">25</span>
-            <span class="numara">26</span>
-            <span class="numara">27</span>
-            <span class="numara">28</span>
-            <span class="numara">29</span>
-            <span class="numara">30</span>
-            <span class="numara">31</span>
-            <span class="numara">32</span>
-            <span class="numara">33</span>
-            <span class="numara">34</span>
-            <span class="numara">35</span>
-            <span class="numara">36</span>
-            <span class="numara">37</span>
-            <span class="numara">38</span>
-            <span class="numara">39</span>
-            <span class="numara">40</span>
-            <span class="numara">41</span>
-            <span class="numara">42</span>
-            <span class="numara">43</span>
-            <span class="numara">44</span>
-            <span class="numara">45</span>
-            <span class="numara">46</span>
-            <span class="numara">47</span>
-            <span class="numara">48</span>
-            <span class="numara">49</span>
-            <span class="numara">50</span>
-            <span class="numara">51</span>
-            <span class="numara">52</span>
-            <span class="numara">53</span>
-            <span class="numara">54</span>
-            <span class="numara">55</span>
-            <span class="numara">56</span>
-            <span class="numara">57</span>
-            <span class="numara">58</span>
-            <span class="numara">59</span>
-            <span class="numara">60</span>
-            <span class="numara">61</span>
-            <span class="numara">62</span>
-            <span class="numara">63</span>
-            <span class="numara">64</span>
-            <span class="numara">65</span>
-            <span class="numara">66</span>
-            <span class="numara">67</span>
-            <span class="numara">68</span>
-            <span class="numara">69</span>
-            <span class="numara">70</span>
-            <span class="numara">71</span>
-            <span class="numara">72</span>
+        <div id="no">         
+           <span class="numara" *ngFor="let nun of numbers; let i=index">{{i+1}}</span>
 
         </div>
+     
         <div id="satir">
-            <span class="yorum">/*<br>&nbsp;&nbsp;&nbsp; Here Is My Profile > <a href="#">Jose Alain Diaz Carrero </a> <br>*/</span>
+            <span class="yorum">/*<br>&nbsp;&nbsp;&nbsp; Here Is My Profile. <a href="../../assets/cv/CV_ALAIN_DIAZ_2021_05.pdf" target="_blank" >{{datosPersonales.nombre}} </a> <br>*/</span>
                <br>
+              
 
-
-               <span class="ab">class </span><span class="cl">datosPersonales {{llaveAbre}}  </span>
+               <span class="ab">class </span><span class="cl">datosPersonales </span> {{llaveAbre}}  
                <br>
                <span class="beyaz"></span>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="ab">private</span> name</span> <span class="beyaz">=</span>
-               <span class="ozellik">&nbsp;"Jose Alain Diaz Carrero"</span><span class="beyaz">;</span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ab">private</span> name</span> <span class="beyaz">=</span>
+               <span class="ozellik">&nbsp;"{{datosPersonales.nombre}}"</span><span class="beyaz">;</span>
                <br>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="ab">private</span> email</span> <span class="beyaz">=</span>
-               <span class="ozellik">&nbsp;"jadcve@gmail.com"</span><span class="beyaz">;</span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ab">private</span> email</span> <span class="beyaz">=</span>
+               <span class="ozellik">&nbsp;"{{datosPersonales.email}}"</span><span class="beyaz">;</span>
                <br>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="ab">private</span> telefono</span> <span class="beyaz">=</span>
-               <span class="ozellik">&nbsp;"+56991364514"</span><span class="beyaz">;</span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ab">private</span> telefono</span> <span class="beyaz">=</span>
+               <span class="ozellik">&nbsp;"{{datosPersonales.tlf}}"</span><span class="beyaz">;</span>
                <br>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="ab">private</span> linkedl</span> <span class="beyaz">=</span>
-               <span class="ozellik">&nbsp; "https://www.linkedin.com/in/jadcve/"</span><span class="beyaz">;</span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ab">private</span> linkedIn</span> <span class="beyaz">=</span>
+               <span class="ozellik">&nbsp; "{{datosPersonales.linkedin}}"</span><span class="beyaz">;</span>
                <br>
                {{llaveCierra}}
-            
                <br>
                <br>
-               <span class="ab">private function </span> <span class="ti"> educaci&oacute;n {{llaveAbre}}  </span>
+
+               <span class="ab"> function </span> <span class="ti"> educaci&oacute;n ()</span> {{llaveAbre}}  
                <br>
                <span class="beyaz"></span>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>universidad</span> <span class="beyaz"> =</span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>universidad</span> <span class="beyaz"> =</span>
                <span class="ozellik">&nbsp;"Facultad de Ingenieria, Universidad de Los Andes - M&eacute;rida Venezuela"</span><span class="beyaz">;</span>
                <br>
                <span class="beyaz"></span>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>titulo</span> <span class="beyaz"> =</span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>titulo</span> <span class="beyaz"> =</span>
                <span class="ozellik">&nbsp;"Ingeniero de Sistemas - Opci&oacute;n Sistemas Computacionales"</span><span class="beyaz">;</span>
                <br>
                <span class="beyaz"></span>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>universidad</span> <span class="beyaz"> =</span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>universidad</span> <span class="beyaz"> =</span>
                <span class="ozellik">&nbsp;"Facultad de Ingenieria, Universidad de Los Andes - M&eacute;rida Venezuela"</span><span class="beyaz">;</span>
                <br>
                <span class="beyaz"></span>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>postgrado</span> <span class="beyaz"> =</span>
-               <span class="ozellik">&nbsp;"MSc Telecomunicaciones"</span><span class="beyaz">;</span>
-               <br>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span><span class="ti"> experiencia()</span></span>; 
-               <br>
-               {{llaveCierra}}
-               <br>  
-               <br>
-
-               <span class="ab">private function </span> <span class="ti"> experiencia {{llaveAbre}}  </span>
-               <br>
-               <span class="beyaz"></span>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>universidad</span> <span class="beyaz"> =</span>
-               <span class="ozellik">&nbsp;"Facultad de Ingenieria, Universidad de Los Andes - M&eacute;rida Venezuela"</span><span class="beyaz">;</span>
-               <br>
-               <span class="beyaz"></span>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>titulo</span> <span class="beyaz"> =</span>
-               <span class="ozellik">&nbsp;"Ingeniero de Sistemas - Opci&oacute;n Sistemas Computacionales"</span><span class="beyaz">;</span>
-               <br>
-               <span class="beyaz"></span>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>universidad</span> <span class="beyaz"> =</span>
-               <span class="ozellik">&nbsp;"Facultad de Ingenieria, Universidad de Los Andes - M&eacute;rida Venezuela"</span><span class="beyaz">;</span>
-               <br>
-               <span class="beyaz"></span>
-               <span class="secici">&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>postgrado</span> <span class="beyaz"> =</span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>postgrado</span> <span class="beyaz"> =</span>
                <span class="ozellik">&nbsp;"MSc Telecomunicaciones"</span><span class="beyaz">;</span>
                <br>
                {{llaveCierra}}
                <br>  
                <br>
+
+               <span class="ab"> function </span> <span class="ti"> educaci&oacute;n ()</span> {{llaveAbre}}  
+               <br>
+               <span class="beyaz"></span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>universidad</span> <span class="beyaz"> =</span>
+               <span class="ozellik">&nbsp;"Facultad de Ingenieria, Universidad de Los Andes - M&eacute;rida Venezuela"</span><span class="beyaz">;</span>
+               <br>
+               <span class="beyaz"></span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>titulo</span> <span class="beyaz"> =</span>
+               <span class="ozellik">&nbsp;"Ingeniero de Sistemas - Opci&oacute;n Sistemas Computacionales"</span><span class="beyaz">;</span>
+               <br>
+               <span class="beyaz"></span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>universidad</span> <span class="beyaz"> =</span>
+               <span class="ozellik">&nbsp;"Facultad de Ingenieria, Universidad de Los Andes - M&eacute;rida Venezuela"</span><span class="beyaz">;</span>
+               <br>
+               <span class="beyaz"></span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="th">this</span><span class="ab">-></span>postgrado</span> <span class="beyaz"> =</span>
+               <span class="ozellik">&nbsp;"MSc Telecomunicaciones"</span><span class="beyaz">;</span>
+               <br>
+               {{llaveCierra}}
+               <br>  
+               <br>
+
+               <span class="yorum">/*<br>&nbsp;&nbsp;&nbsp; Experiencia Laboral.  <br>*/</span> 
+               <br>
+
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{tresit.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{tresit.cargo}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{tresit.fecha}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{tresit.ciudad}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{tresit.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{tresit.p2}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br> 
                <br> 
 
-
-
-
-               <br>               <span class="secici">&nbsp;&nbsp;&nbsp;konum</span> <span class="beyaz">:</span>
-               <span class="ozellik">&nbsp;manisa</span><span class="beyaz">;</span>
-               <span class="yorum" style="display:inline-block;">&nbsp;/* Memleket Aydın */</span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{netred.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{netred.cargo}}"</span>
+               <span class="beyaz">,</span>
                <br>
-   
-               <span class="secici">&nbsp;&nbsp;&nbsp;okul</span> <span class="beyaz">:</span>
-               <span class="ozellik">&nbsp;cbü</span><span class="beyaz">;</span>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{netred.fecha}}"</span>
+               <span class="beyaz">,</span>
                <br>
-   
-               <span class="secici">&nbsp;&nbsp;&nbsp;bolum</span> <span class="beyaz">:</span>
-               <span class="ozellik">&nbsp;<font color="#D6FF00">"Yazılım Mühendisliği"</font></span><span class="beyaz">;</span>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{netred.ciudad}}"</span>
+               <span class="beyaz">,</span>
                <br>
-   
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{netred.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{netred.p2}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{netred.p3}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br>  
+               <br>  
+
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{glovocapital.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{glovocapital.cargo}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{glovocapital.fecha}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{glovocapital.ciudad}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{glovocapital.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{glovocapital.p2}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br> 
+               <br>
+
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{kpi.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{kpi.cargo}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{kpi.fecha}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{kpi.ciudad}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{kpi.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{kpi.p2}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{kpi.p3}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br>  
+               <br>  
+           
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{actis.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{actis.cargo}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{actis.fecha}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{actis.ciudad}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{actis.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br>  
+               <br>  
+
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{redpill.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{redpill.cargo}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{redpill.fecha}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{redpill.ciudad}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{redpill.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{redpill.p2}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{redpill.p3}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br>  
+               <br>  
+
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{systam.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{systam.cargo}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{systam.fecha}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{systam.ciudad}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{systam.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br>  
+               <br>  
+
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{gotaim.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{gotaim.cargo}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{gotaim.fecha}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{gotaim.ciudad}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{gotaim.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{gotaim.p2}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{gotaim.p3}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br>  
+               <br> 
+
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{sao.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{sao.cargo}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{sao.fecha}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{sao.ciudad}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{sao.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{sao.p2}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br>  
+               <br> 
+
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{alcaldia.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{alcaldia.cargo}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{alcaldia.fecha}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{alcaldia.ciudad}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{alcaldia.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{alcaldia.p2}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{alcaldia.p3}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br>  
+               <br> 
+
+               <span class="secici">&nbsp;&nbsp;&nbsp;{{pdvsa.nombreEmpresa}}: <br> &nbsp;&nbsp;</span>  {{llaveAbre}}  <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cargo": </span> <span class="ti"> "{{pdvsa.cargo}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Fecha": </span> <span class="ti"> "{{pdvsa.fecha}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ciudad": </span> <span class="ti"> "{{pdvsa.ciudad}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               <span class="ab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Proyectos": </span> [ <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{llaveAbre}} 
+               <br>  
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="ti"> "{{pdvsa.p1}}"</span>
+               <span class="beyaz">,</span>
+               <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{llaveCierra}}
+               <br>  
+               <br> 
+
+               <span class="cl">.conocimientos_generales</span>
+               <br>
                <span class="beyaz"></span>
                <br>
-               <br>
    
-   
-   
-               <span class="cl">.yetenekler</span>
-               <br>
-               <span class="beyaz"></span>
-               <br>
-   
-               <span class="secici">&nbsp;&nbsp;&nbsp;html</span> <span class="beyaz">:</span>
+               <span class="secici" *ngFor="let know of conocimientos;">{{know}} <br></span> <span class="beyaz"></span>
+
+               <br><br>
                <span class="ozellik">&nbsp;100%</span><span class="beyaz">;</span>
                <br>
    
    
-               <span class="secici">&nbsp;&nbsp;&nbsp;css</span> <span class="beyaz">:</span>
+               <span class="secici">&nbsp;&nbsp;&nbsp;PHP</span> <span class="beyaz">:</span>
                <span class="ozellik">&nbsp;100%</span><span class="beyaz">;</span>
                <br>
    
